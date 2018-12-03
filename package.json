@@ -1,0 +1,19 @@
+{
+  "name": "pickupappapi",
+  "version": "1.0.0",
+  "description": "The Pick-up app is a tool for riders to schedule a car pick-up to their local destination. The app’s automated dispatch checks a drivers' availability and pairs with a compatible pick-up request. The app notifies drivers and riders that the pick-up has been booked.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tishana/PickUpAppAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tishana/PickUpAppAPI/issues"
+  },
+  "homepage": "https://github.com/tishana/PickUpAppAPI#readme"
+}
