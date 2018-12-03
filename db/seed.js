@@ -1,6 +1,6 @@
 const mongoose = require("./connection");
-const Driver = require("../models/Driver");
 const seedData = require("./seedData.json");
+const Driver = require("../models/Driver");
 mongoose.Promise = Promise;
 
 
