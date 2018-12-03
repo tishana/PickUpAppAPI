@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const Schema = mongoose.Schema
 const Order = new mongoose.Schema({
   name: String,
   email: String,

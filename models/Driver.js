@@ -5,7 +5,7 @@ const Driver = new mongoose.Schema({
   email: String,
   phone: String,
   available: Boolean,
-  orders: [Order]
+  orders: []
 });
 
 

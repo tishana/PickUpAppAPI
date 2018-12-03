@@ -1,10 +1,12 @@
 const mongoose = require("./connection");
-const Order = require("../models/Order");
 const seedData = require("./seedData.json");
+const Driver = require("../models/Driver");
+mongoose.Promise = Promise;
 
-Order.remove({})
+
+Driver.remove({})
   .then(() => {
-    return Order.collection.insert(seedData);
+    return Driver.collection.insert(seedData);
   })
   .then(() => {
     process.exit();
