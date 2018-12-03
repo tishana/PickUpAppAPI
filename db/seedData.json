@@ -8,13 +8,13 @@
     {
         name: Matt,
         email: matt@gmail.com,
-        phone: 202-232-4242,
+        phone: 571-343-4433,
         available: True,
     },
     {
         name: scottridle,
         email: scottridle@gmail.com,
-        phone: 202-232-4242,
+        phone: 703-334-2322,
         available: True,
     },
     {
@@ -26,13 +26,13 @@
     {
         name: jordanmil,
         email: jordanmil@gmail.com,
-        phone: 202-232-4242,
+        phone: 202-459-3939,
         available: True,
     },
     {
         name: james,
         email: james@gmail.com,
-        phone: 202-232-4242,
+        phone: 240-343-3434,
         available: True,
     }
 ]
