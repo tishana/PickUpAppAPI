@@ -1,0 +1,38 @@
+[
+    {
+        name: John,
+        email: john@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    },
+    {
+        name: Matt,
+        email: matt@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    },
+    {
+        name: scottridle,
+        email: scottridle@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    },
+    {
+        name: crabman,
+        email: crabman@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    },
+    {
+        name: jordanmil,
+        email: jordanmil@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    },
+    {
+        name: james,
+        email: james@gmail.com,
+        phone: 202-232-4242,
+        available: True,
+    }
+]
