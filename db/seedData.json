@@ -1,38 +1,38 @@
 [
     {
-        name: John,
-        email: john@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "John",
+        "email": "john@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     },
     {
-        name: Matt,
-        email: matt@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "Matt",
+        "email": "matt@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     },
     {
-        name: scottridle,
-        email: scottridle@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "Scottridle",
+        "email": "scottridle@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     },
     {
-        name: crabman,
-        email: crabman@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "Crabman",
+        "email": "crabman@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     },
     {
-        name: jordanmil,
-        email: jordanmil@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "Jordanmil",
+        "email": "jordanmil@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     },
     {
-        name: james,
-        email: james@gmail.com,
-        phone: 202-232-4242,
-        available: True,
+        "name": "James",
+        "email": "james@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
     }
 ]
