@@ -1,17 +1,18 @@
 const express = require("express")
 const parser = require("body-parser")
-// const cors = require('cors')
+const cors = require('cors')
 const Driver = require('./models/Driver')
 const Order = require('./models/Order')
+const orderData = require('./db/orderData.json')
 
 const app = express()
 
 
 
-// app.use(parser.urlencoded({ extended: true }))
+app.use(parser.urlencoded({ extended: true }))
 
 app.use(parser.json())
-// app.use(cors())
+app.use(cors())
 
 
 app.get('/api/drivers', (req, res) => {
@@ -22,6 +23,10 @@ app.get('/api/drivers', (req, res) => {
         .catch((err) => {
             console.log(err)
         })
+})
+
+app.get('/api/orders', (req, res) => {
+    res.json(orderData)
 })
 
 app.post('/api/orders', (req, res) => {
