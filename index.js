@@ -67,5 +67,8 @@ app.delete('/api/orders/delete/:id', (req, res) => {
 })
 
 
+app.set('port', process.env.PORT || 8000)
 
-app.listen(8000, () => console.log("on port 8000..."));
+app.listen(app.get('port'), () => {
+  console.log('Server listening on port 800' + app.get('port'))
+})
