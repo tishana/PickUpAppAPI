@@ -1,6 +1,6 @@
 const express = require("express")
 const parser = require("body-parser")
-const cors = require('cors')
+// const cors = require('cors')
 const Driver = require('./models/Driver')
 
 const app = express()
@@ -10,7 +10,8 @@ const app = express()
 // app.use(parser.urlencoded({ extended: true }))
 
 app.use(parser.json())
-app.use(cors())
+// app.use(cors())
+
 
 app.get('/api/drivers', (req, res) => {
     Driver.find()
@@ -22,4 +23,4 @@ app.get('/api/drivers', (req, res) => {
         })
 })
 
-app.listen(8000, () => console.log("on port 8000..."))
+app.listen(8000, () => console.log("on port 8000..."));

@@ -1,13 +1,17 @@
 const mongoose = require("./connection");
-const seedData = require("./seedData.json");
+const seeds = require("./seedData");
 const Driver = require("../models/Driver");
-mongoose.Promise = Promise;
 
+mongoose.Promise = Promise;
 
 Driver.remove({})
   .then(() => {
-    return Driver.collection.insert(seedData);// data is never inserted to collections, please fix. TT
+    Driver.collection.insert(seeds)
+      .then((seeds) => {
+        console.log(seeds)
+        process.exit()
+      })
   })
-  .then(() => {
-    process.exit();
-  });
+  .catch((err) => {
+    console.log(err)
+  })
