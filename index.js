@@ -2,6 +2,7 @@ const express = require("express")
 const parser = require("body-parser")
 // const cors = require('cors')
 const Driver = require('./models/Driver')
+const Order = require('./models/Order')
 
 const app = express()
 
@@ -22,5 +23,17 @@ app.get('/api/drivers', (req, res) => {
             console.log(err)
         })
 })
+
+app.post('/api/orders', (req, res) => {
+    Order.create(req.body)
+        .then((order) => {
+            res.json(order)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+
+
 
 app.listen(8000, () => console.log("on port 8000..."));
