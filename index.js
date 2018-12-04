@@ -6,7 +6,6 @@ const app = express();
 
 
 app.use(parser.urlencoded({ extended: true }));
-
 app.use(parser.json());
 
 app.get('/api/drivers', (req, res) => {
