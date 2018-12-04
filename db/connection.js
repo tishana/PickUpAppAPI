@@ -9,3 +9,4 @@ if (process.env.NODE_ENV == "production") {
 mongoose.Promise = Promise;
 mongoose.set("debug", true);
 module.exports = mongoose;
+
