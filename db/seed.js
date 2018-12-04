@@ -15,20 +15,3 @@ Driver.remove({})
   .catch((err) => {
     console.log(err)
   })
-
-// Driver.remove({})
-//   .then((drivers) => {
-//     Driver.collection.insert(drivers);
-//   })
-//   .then(() => {
-//     process.exit();
-//   });
-
-  // Driver.remove({}).then(_ => {
-  //   console.log("Dropped the DB");
-  //   Driver.collection.insert(seeds).then(seededEntries => {
-  //     console.log(seededEntries);
-  //     mongoose.connection.close();
-  //   });
-  // });
-  
