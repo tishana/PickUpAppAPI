@@ -5,7 +5,7 @@ const Order = new mongoose.Schema({
   email: String,
   pickUpAddress: String,
   dropOffAddress: String,
-  time : { type: String },
+  time: { type: String },
   driver: {
     type: Schema.Types.ObjectId,
     ref: "Driver"
