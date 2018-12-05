@@ -11,7 +11,7 @@ Driver.remove({})
     Driver.collection.insert(seeds)
       .then((seeds) => {
         console.log(seeds)
-        process.exit()
+        // process.exit()
       })
   })
   .catch((err) => {
