@@ -15,8 +15,14 @@ app.use(cors())
 
 
 
-app.get('/api/orders', (req, res) => {
-  res.json(orderData)
+app.get('/api/drivers', (req, res) => {
+    Driver.find()
+        .then((drivers) => {
+            res.json(drivers)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 })
 
 app.get('/api/orders', (req, res) => {
@@ -42,6 +48,10 @@ app.get('api/orders/:id', (req, res) => {
 
 app.post('/api/orders', (req, res) => {
     Order.create(req.body)
+        // select driver (random from availabily? Or first available?) TT
+        // add driver id to new order TT
+        // push new order id to driver.orders TT
+        // redirect to show confirmation of the one order TT
         .then((order) => {
             res.json(order)
         })
