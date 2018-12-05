@@ -15,14 +15,8 @@ app.use(cors())
 
 
 
-app.get('/api/drivers', (req, res) => {
-    Driver.find()
-        .then((drivers) => {
-            res.json(drivers)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+app.get('/api/orders', (req, res) => {
+  res.json(orderData)
 })
 
 app.get('/api/orders', (req, res) => {
@@ -70,5 +64,6 @@ app.delete('/api/orders/delete/:id', (req, res) => {
 app.set('port', process.env.PORT || 8000)
 
 app.listen(app.get('port'), () => {
-    console.log('Server listening on port 8000' + app.get('port'))
+    console.log('Server listening on port ' + app.get('port'))
 })
+
