@@ -66,11 +66,11 @@ app.post('/api/orders', (req, res) => {
                     console.log(err)
                 })
         })// push new order id to driver.orders TT
-    
-    
+
+
 })
 
-app.delete('/api/orders/delete/:id', (req, res) => {
+app.delete('/api/orders/:id', (req, res) => {
     Order.findOneAndRemove({ _id: req.params.id })
         .then(() => {
             res.redirect('/confirm')
