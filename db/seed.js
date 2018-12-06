@@ -6,25 +6,27 @@ const Driver = require("../models/Driver");
 
 mongoose.Promise = Promise;
 
-Driver.remove({})
+Order.remove({})
   .then(() => {
-    Driver.collection.insert(seeds)
-      .then((seeds) => {
-        console.log(seeds)
+    Order.collection.insert(orderSeeds)
+      .then((orderSeeds) => {
+        console.log(orderSeeds)
       })
   })
   .catch((err) => {
     console.log(err)
   })
 
-  Order.remove({})
+Driver.remove({})
   .then(() => {
-    Order.collection.insert(orderSeeds)
-      .then((orderSeeds) => {
-        console.log(orderSeeds)
+    Driver.collection.insert(seeds)
+      .then((seeds) => {
+        console.log(seeds)
         process.exit()
       })
   })
   .catch((err) => {
     console.log(err)
   })
+
+  
