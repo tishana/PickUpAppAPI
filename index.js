@@ -15,17 +15,12 @@ app.use(cors())
 
 
 
-app.get('/api/drivers', (req, res) => {
-    Driver.find()
-        .then((drivers) => {
-            res.json(drivers)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+app.get('/api/orders', (req, res) => {
+  res.json(orderData)
 })
 
 app.get('/api/orders', (req, res) => {
+    // res.json(orderData) // we shouldn't use this because it will only show the data in the seed file, and not ALL Orders TT
     Order.find()
         .then((orders) => {
             res.json(orders)
@@ -58,7 +53,7 @@ app.post('/api/orders', (req, res) => {
 app.delete('/api/orders/delete/:id', (req, res) => {
     Order.findOneAndRemove({ _id: req.params.id })
         .then(() => {
-            res.redirect('/confirm')
+            res.redirect('/confirm')//placeholder for cancelled orders
         })
         .catch(err => {
             console.log(err)

@@ -1,6 +1,6 @@
 const mongoose = require("./connection");
-const orderSeeds = require("./orderData")
 const seeds = require("./seedData");
+const orderSeeds = require("./orderData")
 const Order = require("../models/Order")
 const Driver = require("../models/Driver");
 
@@ -11,6 +11,7 @@ Driver.remove({})
     Driver.collection.insert(seeds)
       .then((seeds) => {
         console.log(seeds)
+        process.exit()
       })
   })
   .catch((err) => {
