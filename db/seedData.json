@@ -34,5 +34,11 @@
         "email": "james@gmail.com",
         "phone": "202-232-4242",
         "available": true
+    },
+    {
+        "name": "Captain Freak",
+        "email": "captain@gmail.com",
+        "phone": "301-433-1231",
+        "available": true
     }
 ]
