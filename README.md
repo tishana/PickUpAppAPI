@@ -1,6 +1,6 @@
 # Pick Up App
 
-The Pick-up app is a tool for riders to schedule a car pick-up to their local destination. The app’s automated dispatch checks a drivers' availability and pairs with a compatible pick-up request. The app notifies drivers and riders that the pick-up has been booked.
+The Pick-up app is a tool for riders to schedule a car pick-up to their local destination. The app’s automated dispatch checks a drivers' availability and pairs with a compatible pick-up request. The app shows riders that the pick-up has been booked.
 
 ## Team Members
 - Donell Ellis
@@ -22,10 +22,10 @@ The Pick-up app is a tool for riders to schedule a car pick-up to their local de
 
 * I can create an Order
 * I can view my Order once created, and see:
-⋅⋅* My Confirmation Number
-⋅⋅* My Pick Up Location
-⋅⋅* My Drop Off Location
-⋅⋅* My Pick Up Time
+⋅⋅1. My Confirmation Number
+⋅⋅2. My Pick Up Location
+⋅⋅3. My Drop Off Location
+⋅⋅4. My Pick Up Time
 * I can view an existing Order by entering my Order Id on the home page in the text field beneath the words Order Number 
 * I can delete/cancel an Order by clicking "Cancel Order" on the Order confirmation page
 
