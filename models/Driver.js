@@ -1,5 +1,5 @@
 const mongoose = require("../db/connection");
-
+mongoose.set('useFindAndModify', false)
 const Driver = new mongoose.Schema({
   name: String,
   email: String,
