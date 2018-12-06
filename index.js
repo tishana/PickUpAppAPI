@@ -26,7 +26,6 @@ app.get('/api/drivers', (req, res) => {
 })
 
 app.get('/api/orders', (req, res) => {
-    // res.json(orderData) // we shouldn't use this because it will only show the data in the seed file, and not ALL Orders TT
     Order.find()
         .then((orders) => {
             res.json(orders)
@@ -47,6 +46,7 @@ app.get('api/orders/:id', (req, res) => {
 })
 
 app.post('/api/orders', (req, res) => {
+
     Driver.findOneAndUpdate({ available: true }, { available: false }, { new: true })// change availability of chosen driver to false TT
         .then(driver => {
             console.log(driver)
@@ -66,13 +66,14 @@ app.post('/api/orders', (req, res) => {
                     console.log(err)
                 })
         })// push new order id to driver.orders TT
-    // redirect to show confirmation of the one order TT
+    
+    
 })
 
 app.delete('/api/orders/delete/:id', (req, res) => {
     Order.findOneAndRemove({ _id: req.params.id })
         .then(() => {
-            res.redirect('/confirm')//placeholder for cancelled orders
+            res.redirect('/confirm')
         })
         .catch(err => {
             console.log(err)
