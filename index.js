@@ -47,17 +47,26 @@ app.get('api/orders/:id', (req, res) => {
 })
 
 app.post('/api/orders', (req, res) => {
-    Order.create(req.body)
-        // select driver (random from availabily? Or first available?) TT
-        // add driver id to new order TT
-        // push new order id to driver.orders TT
-        // redirect to show confirmation of the one order TT
-        .then((order) => {
-            res.json(order)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+    Driver.findOneAndUpdate({ available: true }, { available: false }, { new: true })// change availability of chosen driver to false TT
+        .then(driver => {
+            console.log(driver)
+            // select driver TT
+            Order.create({
+                name: req.body.name,
+                email: req.body.email,
+                pickUpAddress: req.body.pickUpAddress,
+                dropOffAddress: req.body.dropOffAddress,
+                time: req.body.time,
+                driver: driver._id // add driver id to new order TT
+            }).then((order) => {
+                res.json(order)
+                console.log(one)
+            })
+                .catch((err) => {
+                    console.log(err)
+                })
+        })// push new order id to driver.orders TT
+    // redirect to show confirmation of the one order TT
 })
 
 app.delete('/api/orders/delete/:id', (req, res) => {
