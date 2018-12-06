@@ -1,6 +1,6 @@
 # Pick Up App
 
-The Pick-up app is a tool for riders to schedule a car pick-up to their local destination.⋅⋅ The app’s automated dispatch checks a drivers' availability and pairs with a compatible pick-up request.⋅⋅ The app notifies drivers and riders that the pick-up has been booked.
+The Pick-up app is a tool for riders to schedule a car pick-up to their local destination. The app’s automated dispatch checks a drivers' availability and pairs with a compatible pick-up request. The app notifies drivers and riders that the pick-up has been booked.
 
 ## Team Members
 - Donell Ellis
@@ -18,25 +18,29 @@ The Pick-up app is a tool for riders to schedule a car pick-up to their local de
 
 ## Our Approach
 
-* User Stories
+### User Stories
 
-⋅⋅* I can create an Order
-⋅⋅* I can view my Order once created
-⋅⋅* I can view an existing Order
-⋅⋅* I can delete/cancel an Order
+* I can create an Order
+* I can view my Order once created, and see:
+⋅⋅* My Confirmation Number
+⋅⋅* My Pick Up Location
+⋅⋅* My Drop Off Location
+⋅⋅* My Pick Up Time
+* I can view an existing Order by entering my Order Id on the home page in the text field beneath the words Order Number 
+* I can delete/cancel an Order by clicking "Cancel Order" on the Order confirmation page
 
-* Acheiving CRUD
+### Acheiving CRUD
 
-⋅⋅* C - Creating new Orders
-⋅⋅* R - Showing a New Order once it is created OR showing an existing order once a user inputs the Order Id
-⋅⋅* U - Updating/Modifying a Driver's availability when assigning them to an Order (when the Order is created) OR Updating/Modifying a Driver's availability when an Order is canceled
-⋅⋅* D - Canceling an order
+* C - Creating new Orders
+* R - Showing a New Order once it is created OR showing an existing order once a user inputs the Order Id
+* U - Updating/Modifying a Driver's availability when assigning them to an Order (when the Order is created) OR Updating/Modifying a Driver's availability when an Order is canceled
+* D - Canceling an order
 
-* Front End
+### Front End
 
 
 
-* Back End
+### Back End
 
 
 
