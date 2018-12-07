@@ -1,10 +1,21 @@
 const mongoose = require("./connection");
-const seeds = require("./seedData");
 const orderSeeds = require("./orderData")
+const seeds = require("./seedData");
 const Order = require("../models/Order")
 const Driver = require("../models/Driver");
 
 mongoose.Promise = Promise;
+
+Order.remove({})
+  .then(() => {
+    Order.collection.insert(orderSeeds)
+      .then((orderSeeds) => {
+        console.log(orderSeeds)
+      })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
 Driver.remove({})
   .then(() => {
@@ -18,14 +29,4 @@ Driver.remove({})
     console.log(err)
   })
 
-  Order.remove({})
-  .then(() => {
-    Order.collection.insert(orderSeeds)
-      .then((orderSeeds) => {
-        console.log(orderSeeds)
-        process.exit()
-      })
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+  

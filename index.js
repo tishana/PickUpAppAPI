@@ -30,7 +30,6 @@ app.get('/api/drivers', (req, res) => {
 })
 
 app.get('/api/orders', (req, res) => {
-    // res.json(orderData) // we shouldn't use this because it will only show the data in the seed file, and not ALL Orders TT
     Order.find()
         .then((orders) => {
             res.json(orders)
@@ -51,24 +50,37 @@ app.get('api/orders/:id', (req, res) => {
 })
 
 app.post('/api/orders', (req, res) => {
-    Order.create(req.body)
-        // select driver (random from availabily? Or first available?) TT
-        // add driver id to new order TT
-        // push new order id to driver.orders TT
-        // redirect to show confirmation of the one order TT
-        .then((order) => {
-            res.json(order)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+
+    Driver.findOneAndUpdate({ available: true }, { available: false }, { new: true })// change availability of chosen driver to false TT
+        .then(driver => {
+            console.log(driver)
+            // select driver TT
+            Order.create({
+                name: req.body.name,
+                email: req.body.email,
+                pickUpAddress: req.body.pickUpAddress,
+                dropOffAddress: req.body.dropOffAddress,
+                time: req.body.time,
+                driver: driver._id // add driver id to new order TT
+            }).then((order) => {
+                res.json(order)
+                console.log(one)
+            })
+                .catch((err) => {
+                    console.log(err)
+                })
+        })// push new order id to driver.orders TT
+
+
 })
 
 app.delete('/api/orders/:id', (req, res) => {
     Order.findOneAndRemove({ _id: req.params.id })
         .then(() => {
+      
             console.log("deleted")
             // res.redirect('/confirm')//placeholder for cancelled orders
+
         })
         .catch(err => {
             console.log(err)
