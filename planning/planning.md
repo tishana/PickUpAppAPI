@@ -9,7 +9,7 @@ DEPLOYMENT!!!
 On the third day, we were still working through some bugs before deploying the front end, but our back end was deployed and talking to the front end. Our API was complete! One token was used.
 ## Day 4
 ISSUES!!!!
-We had a few hiccups,  with backend deployment and database seeding, and with front end deleting orders. We used one token.
+We had a few hiccups,  with backend deployment and database seeding, and with front end deleting orders. The front end was styled. We used one token.
 ## Day 5
 CLEAN UP AND PRESENT!!!
 
