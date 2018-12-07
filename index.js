@@ -3,6 +3,10 @@ const parser = require("body-parser")
 const cors = require('cors')
 const Driver = require('./models/Driver')
 const Order = require('./models/Order')
+
+// needed for environmental variables in frontend DE
+require('dotenv').config();
+
 // const orderData = require('./db/orderData.json')// see below TT
 
 const app = express()
