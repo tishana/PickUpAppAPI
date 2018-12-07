@@ -40,5 +40,46 @@
         "email": "captain@gmail.com",
         "phone": "301-433-1231",
         "available": true
+    },{
+        "name": "Scottbright",
+        "email": "Scottbright@gmail.com",
+        "phone": "202-650-1201",
+        "available": true
+    },
+    {
+        "name": "Matt",
+        "email": "matt@gmail.com",
+        "phone": "202-878-7872",
+        "available": true
+    },
+    {
+        "name": "Scottridle",
+        "email": "scottridle@gmail.com",
+        "phone": "202-232-4242",
+        "available": true
+    },
+    {
+        "name": "thor",
+        "email": "thor@gmail.com",
+        "phone": "570-234-6676",
+        "available": true
+    },
+    {
+        "name": "Jordanmil",
+        "email": "jordanmil@gmail.com",
+        "phone": "202-878-9094",
+        "available": true
+    },
+    {
+        "name": "JAmil",
+        "email": "JAmil@gmail.com",
+        "phone": "202-909-1201",
+        "available": true
+    },
+    {
+        "name": "Tony Frank",
+        "email": "Tony@gmail.com",
+        "phone": "301-433-1231",
+        "available": true
     }
 ]

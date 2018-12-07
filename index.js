@@ -69,8 +69,6 @@ app.post('/api/orders', (req, res) => {
                     console.log(err)
                 })
         })
-
-
 })
 
 app.delete('/api/orders/:id', (req, res) => {
@@ -91,4 +89,3 @@ app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), () => {
     console.log('Server listening on port ' + app.get('port'))
 })
-
