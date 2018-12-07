@@ -7,7 +7,6 @@ const Order = require('./models/Order')
 // needed for environmental variables in frontend DE
 require('dotenv').config();
 
-// const orderData = require('./db/orderData.json')// see below TT
 
 const app = express()
 
@@ -69,7 +68,7 @@ app.post('/api/orders', (req, res) => {
                 .catch((err) => {
                     console.log(err)
                 })
-        })// push new order id to driver.orders TT
+        })
 
 
 })
@@ -77,9 +76,8 @@ app.post('/api/orders', (req, res) => {
 app.delete('/api/orders/:id', (req, res) => {
     Order.findOneAndRemove({ _id: req.params.id })
         .then(() => {
-      
+
             console.log("deleted")
-            // res.redirect('/confirm')//placeholder for cancelled orders
 
         })
         .catch(err => {
