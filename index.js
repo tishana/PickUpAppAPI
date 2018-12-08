@@ -5,7 +5,7 @@ const Driver = require('./models/Driver')
 const Order = require('./models/Order')
 
 // needed for environmental variables in frontend DE
-require('dotenv').config();
+// require('dotenv').config();
 
 
 const app = express()
@@ -55,6 +55,7 @@ app.post('/api/orders', (req, res) => {
             console.log(driver)
             // select driver TT
             Order.create({
+                isActive: true,
                 name: req.body.name,
                 email: req.body.email,
                 pickUpAddress: req.body.pickUpAddress,
@@ -63,7 +64,6 @@ app.post('/api/orders', (req, res) => {
                 driver: driver._id // add driver id to new order TT
             }).then((order) => {
                 res.json(order)
-                console.log(one)
             })
                 .catch((err) => {
                     console.log(err)
@@ -84,6 +84,18 @@ app.delete('/api/orders/:id', (req, res) => {
             console.log(err)
         })
 })
+
+// app.delete('api/orders/:id', (req, res) => { //cancelling order
+//     Order.findByIdAndUpdate({ _id: req.params.id }, { isActive: false }, { new: true })
+//         .then(order => {
+//             Driver.findByIdAndUpdate({ _id: order.driver }, { available: true })
+//                 .then(() => {
+//                     console.log('driver sched modified')
+//                 }).catch(err => {
+//                     console.log(err)
+//                 })
+//         })
+// })
 
 
 app.set('port', process.env.PORT || 8000)

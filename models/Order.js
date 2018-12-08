@@ -4,6 +4,7 @@ mongoose.set('useFindAndModify', false)
 const Schema = mongoose.Schema
 
 const Order = new mongoose.Schema({
+  isActive: Boolean,
   name: String,
   email: String,
   pickUpAddress: String,
